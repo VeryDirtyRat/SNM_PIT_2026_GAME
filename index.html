@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smrt Kočičím Stromům</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>SMRT KOČIČÍM STROMŮM</h1>
+            <p class="subtitle">Nejbrutálnější roztomilá RPG adventura</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-box player-stat">
+                <div class="stat-name">Ty (Agresivní Koťátko)</div>
+                <div class="health-bar-container">
+                    <div class="health-bar" id="player-health-bar"></div>
+                </div>
+                <div class="health-text" id="player-health-text">30/30 HP</div>
+            </div>
+            
+            <div class="vs-badge">VS</div>
+
+            <div class="stat-box enemy-stat">
+                <div class="stat-name" id="enemy-name">Malý škrabák</div>
+                <div class="health-bar-container">
+                    <div class="health-bar" id="enemy-health-bar"></div>
+                </div>
+                <div class="health-text" id="enemy-health-text">10/10 HP</div>
+            </div>
+        </div>
+
+        <div class="log-container" id="game-log">
+            <!-- Game text will appear here -->
+        </div>
+
+        <div class="action-panel">
+            <button class="action-btn attack" id="btn-scratch" onclick="playerAction(1)">
+                <span class="icon">🐾</span>
+                <span class="desc">Zuřivě drápat</span>
+                <span class="detail">Spolehlivý útok</span>
+            </button>
+            <button class="action-btn heavy" id="btn-bite" onclick="playerAction(2)">
+                <span class="icon">🦷</span>
+                <span class="desc">Kousnout do plyše</span>
+                <span class="detail">Silný, ale riskantní</span>
+            </button>
+            <button class="action-btn heal" id="btn-hiss" onclick="playerAction(3)">
+                <span class="icon">😾</span>
+                <span class="desc">Výhrůžně zasyčet</span>
+                <span class="detail">Vyléčí zranění</span>
+            </button>
+        </div>
+        
+        <div class="restart-panel hidden" id="restart-panel">
+            <button class="restart-btn" onclick="initGame()">HRÁT ZNOVU</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
